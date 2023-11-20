@@ -49,29 +49,29 @@ export const isValidLocale = (locale: Locale, locales: Locale[]) =>
     currentLocales[locale && locale.toLowerCase()]
   )
 
-  export const getFullLocale = (shortLocale: Locale) => {
-    const currentLocale = shortLocale.toLowerCase()
-    let locale = currentLocales[defaultLocale].lang
+export const getFullLocale = (shortLocale: Locale) => {
+  const currentLocale = shortLocale.toLowerCase()
+  let locale = currentLocales[defaultLocale].lang
 
-    if (currentLocale.includes('es')) {
-      locale = currentLocales['es-mx'].lang
-    }
-
-    if (currentLocale.includes('de')) {
-      locale = currentLocales['de-de'].lang
-    }
-
-    if (currentLocale.includes('fr')) {
-      locale = currentLocales['fr-fr'].lang
-    }
-
-    if (currentLocale.includes('it')) {
-      locale = currentLocales['it-it'].lang
-    }
-
-    if (currentLocale.includes('pt')) {
-      locale = currentLocales['pt-br'].lang
-    }
-
-    return locale
+  if (currentLocale.includes('es')) {
+    locale = currentLocales['es-mx'].lang
   }
+
+  if (currentLocale.includes('de')) {
+    locale = currentLocales['de-de'].lang
+  }
+
+  if (currentLocale.includes('fr')) {
+    locale = currentLocales['fr-fr'].lang
+  }
+
+  if (currentLocale.includes('it')) {
+    locale = currentLocales['it-it'].lang
+  }
+
+  if (currentLocale.includes('pt')) {
+    locale = currentLocales['pt-br'].lang
+  }
+
+  return locale
+}
